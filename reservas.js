@@ -12,6 +12,10 @@ let reservas = (function(inicio) {
                     precio_base = precio_base + precio_añadido;
                 }
             } else {
+                if (mes == "June" ||mes == "July" ||mes == "August" ||mes == "September"){
+                    reservas.temporada_alta(precio_base);
+                    precio_base = precio_base + precio_añadido;
+                }
                 precio_base = 50;
             }
         },
