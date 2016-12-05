@@ -5,7 +5,7 @@ let reservas = (function (inicio) {
     return {
         //funciones
         dar_valor: function () {
-            mes = moment().format('MMMM');
+            mes = moment().get('month') + 1;
             precio_base = 0;
             dia_actual = moment();
             checkout = moment(document.getElementById("checkout").value);
@@ -23,7 +23,7 @@ let reservas = (function (inicio) {
                 reservas.tiempo_reserva(precio_base);
                 precio_final = precio_base - descuento;
             }
-            if (mes == "June" || mes == "July" || mes == "August" || mes == "September") {
+            if (mes == 6 || mes == 7 || mes == 8 || mes == 9) {
                 reservas.temporada_alta(precio_base);
                 precio_final = precio_final + precio_añadido;
             }
