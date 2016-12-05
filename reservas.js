@@ -4,4 +4,4 @@ var reservas = (function(inicio) {
     return {
         //funciones
     }
-})
+})();
